@@ -1,0 +1,39 @@
+name: exampleName
+sql:
+  driver: MariaDB
+  domainOrIp: localhost
+  port: 3306
+  database: bclSpigot
+  username: USERNAME-HERE
+  password: PASSWORD-HERE
+  options: ''
+permission:
+  command:
+    main: acl.command.main
+    load:
+      command: acl.command.load.command
+      other: acl.command.load.other
+    unload:
+      command: acl.command.unload.command
+      other: acl.command.unload.other
+    reload: acl.command.reload
+    unloadchunks: acl.command.unloadchunks
+    listLoadedChunks: acl.command.listLoadedChunks
+    list:
+      command: acl.command.list.commmand
+      other: acl.command.list.other
+    update: acl.command.update
+  unloadchunks:
+    chunkspertick: 10
+  loads:
+    online:
+      bypass: acl.loads.online.bypass
+    offline:
+      bypass: acl.loads.offline.bypass
+expire: 5d
+expireUpdate: 20m
+metaPerm:
+  onlineCount: []
+  offlineCount: []
+totalMaxChunksLoaded: 10000
+worldMaxChunksLoaded: 10000
