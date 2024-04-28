@@ -33,7 +33,11 @@ permission:
 expire: 5d
 expireUpdate: 20m
 metaPerm:
-  onlineCount: []
-  offlineCount: []
+  onlineCount:
+    - group: default
+      perm: 1
+  offlineCount:
+    - group: default
+      perm: 1
 totalMaxChunksLoaded: 10000
 worldMaxChunksLoaded: 10000
